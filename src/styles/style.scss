@@ -1,0 +1,29 @@
+@import "../fonts/lato/lato";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Raleway:wght@400;600;700;800&display=swap');
+
+// @import "blocks/fonts";
+// @import "../fonts/lato/lato";
+@import "blocks/reset";
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/banner";
+@import "blocks/order";
+@import "blocks/customRange";
+@import "blocks/customSelect";
+
+
+.container {
+  max-width: 1172px;
+  margin: 0 auto;
+}
+@media (max-width:1200px) {
+  .container {
+    max-width: 1172px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+* {
+  font-family: Lato;
+}
+
