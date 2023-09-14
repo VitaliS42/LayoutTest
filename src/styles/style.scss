@@ -1,15 +1,13 @@
-@import "../fonts/lato/lato";
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Raleway:wght@400;600;700;800&display=swap');
 
-// @import "blocks/fonts";
-// @import "../fonts/lato/lato";
-@import "blocks/reset";
-@import "blocks/header";
-@import "blocks/footer";
-@import "blocks/banner";
-@import "blocks/order";
-@import "blocks/customRange";
-@import "blocks/customSelect";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Raleway:wght@400;600;700;800&display=swap');
+@import "lato";
+@import "reset";
+@import "header";
+@import "footer";
+@import "banner";
+@import "order";
+@import "customRange";
+@import "customSelect";
 
 
 .container {
@@ -26,4 +24,3 @@
 * {
   font-family: Lato;
 }
-
