@@ -677,6 +677,7 @@ how to remove the virtical space around the range input in IE*/
   position: relative;
   background-color: #DFDFE0;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .custom-details[open] {
@@ -689,6 +690,18 @@ how to remove the virtical space around the range input in IE*/
   padding: 15px;
   color: #272733;
   list-style: none;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+
+.custom-details summary:hover {
+  background-color: #FFFFFF;
+  border: 2px solid #3E9CDC;
+}
+
+.custom-details[open] summary:hover {
+  background-color: #3D4050;
+  border: 2px solid transparent;
 }
 
 .custom-details summary::-webkit-details-marker {
@@ -729,6 +742,8 @@ how to remove the virtical space around the range input in IE*/
   box-sizing: border-box;
   max-height: 180px;
   overflow: auto;
+  scrollbar-color: #3E9CDC #3D4050;
+  scrollbar-width: thin;
 }
 
 .custom-details__item {
@@ -745,6 +760,21 @@ how to remove the virtical space around the range input in IE*/
 .custom-details__item:hover {
   cursor: pointer;
   color: #42A9ED;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3D4050;
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3E9CDC;
+  border-radius: 5px;
 }
 
 .container {

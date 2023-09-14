@@ -119,38 +119,6 @@
           </div>
         </div>
         <div class="order__grid">
-          <!-- <details class="custom-select grid1">
-            <summary class="radios">
-              <input type="radio" name="item" id="default" title="Auswählen..." checked>
-              <input type="radio" name="item" id="item1" title="Item 1">
-              <input type="radio" name="item" id="item2" title="Item 2">
-              <input type="radio" name="item" id="item3" title="Item 3">
-              <input type="radio" name="item" id="item4" title="Item 4">
-              <input type="radio" name="item" id="item5" title="Item 5">
-            </summary>
-            <ul class="list">
-              <li>
-                <label for="item1">
-                  Item 1
-                  <span></span>
-                </label>
-              </li>
-              <li>
-                <label for="item2">Item 2</label>
-              </li>
-              <li>
-                <label for="item3">Item 3</label>
-              </li>
-              <li>
-                <label for="item4">Item 4</label>
-              </li>
-              <li>
-                <label for="item5">Item 5</label>
-              </li>
-            </ul>
-          </details> -->
-
-
           <details class="custom-details grid1">
             <summary class="custom-details__summary">Выберите тип системы</summary>
             <div class="custom-details__body">
@@ -233,25 +201,33 @@
     display.innerHTML = newValue + "%";
   }
 
+
+  let detailsEl = document.querySelector(".custom-details");
+  let summaryEl = document.querySelector(".custom-details__summary");
+
   // Закрываем details по клику куда угодно
   window.addEventListener("click", function() {
-    let detailsEls = document.querySelectorAll(".custom-details");
-    detailsEls.forEach(element => {
-      element.removeAttribute("open")
+    detailsEl.removeAttribute("open");
     });
 
+  // клик по саммари раскрытого детэйлса закроет его
+  summaryEl.addEventListener("click", function() {
+    if (detailsEl.hasAttribute("open")){
+      event.preventDefault();
+      detailsEl.removeAttribute("open");
+    };
+  });
+
+  // присваиваем значение выбранной опции везде где это нужно
   let selectArea = document.querySelector(".custom-details__body");
-  let summaryEl = document.querySelector(".custom-details__summary");
   selectArea.addEventListener("click", function() {
     if (event.target.classList.contains('custom-details__item')) {
-      console.log(summaryEl.innerHTML)
-      console.log(event.target.innerHTML)
       summaryEl.innerHTML=event.target.innerHTML;
     }
   })
 
 
 
-});
+
 </script>
 </html>
