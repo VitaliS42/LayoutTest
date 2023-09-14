@@ -316,7 +316,7 @@ a {
   }
 }
 .banner {
-  background-image: url(public/banner.jpg);
+  background-image: url(../../public/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -411,7 +411,7 @@ a {
   }
 }
 .order {
-  background-image: url(../../../public/order_back.jpg);
+  background-image: url(../../public/order_back.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
